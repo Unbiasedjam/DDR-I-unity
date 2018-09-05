@@ -40,7 +40,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _EmissionMap:
-        m_Texture: {fileID: 2800000, guid: a196fd6788131ec459bfb26012466fc1, type: 3}
+        m_Texture: {fileID: 2800000, guid: 4b42c70f54fe4f24d84cdc651f46c005, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
@@ -73,6 +73,7 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - _AlphaTestRef: 0.5
+    - _BumpAmt: 18
     - _BumpScale: 1
     - _Cull: 2
     - _Cutoff: 0.5
@@ -95,7 +96,8 @@ Material:
     - _WindQuality: 0
     - _ZWrite: 1
     m_Colors:
-    - _Color: {r: 0.8207547, g: 0.8207547, b: 0.8207547, a: 1}
+    - _BaseScale: {r: 1, g: 1, b: 1, a: 0}
+    - _Color: {r: 0.6981132, g: 0.38026714, b: 0, a: 1}
     - _EmissionColor: {r: 1.3348337, g: 1.3348337, b: 1.3348337, a: 1.3348337}
     - _EmissionColorUI: {r: 0, g: 0, b: 0, a: 1}
     - _EmissionColorWithMapUI: {r: 1, g: 1, b: 1, a: 1}
