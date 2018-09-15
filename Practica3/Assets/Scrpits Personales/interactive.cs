@@ -5,7 +5,6 @@ using UnityEngine;
 public class interactive : MonoBehaviour {
 	// Use this for initialization
 	
-	public Color color;
 	private bool isPlayerInside = false;
 	public GameObject infoPanel;
 
@@ -16,7 +15,7 @@ public class interactive : MonoBehaviour {
 	public float rotationSpeed = 45;
 
 	public void Start(){
-		infoPanel.SetActive(false);
+		infoPanel.SetActive(true);
 	}
 	public void Update(){
 
@@ -27,9 +26,10 @@ public class interactive : MonoBehaviour {
 			Canvas.transform.RotateAround(transform.position, Vector3.up, rotationSpeed*Time.deltaTime);
 		} 
 
-		if(Input.GetKeyDown(KeyCode.I) && isPlayerInside){
+		if(Input.GetKeyDown(KeyCode.O) && isPlayerInside){
 			//gameObject.GetComponent<Renderer>().material.color = color;
-			rotateObject = false;
+			rotationSpeed = 100;
+			rotateObject = true;
 		}
 	}
 
@@ -44,8 +44,9 @@ public class interactive : MonoBehaviour {
 
 	public void OnTriggerExit(Collider other){
 		if(other.CompareTag("Player")){
-			//infoPanel.SetActive(false);
 			isPlayerInside = false;
+			infoPanel.SetActive(true);
+			rotateObject = false;
 		}
 	}
 
