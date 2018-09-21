@@ -5,26 +5,34 @@ using UnityEngine;
 public class interactive : MonoBehaviour {
 	// Use this for initialization
 	
-	public Color color;
+	//Sprite InventoriSprite
 	private bool isPlayerInside = false;
+
+	public GameObject interactivePanel;
 	public GameObject infoPanel;
 
 
 	public void Start(){
 		infoPanel.SetActive(false);
+		interactivePanel.SetActive(false);
 	}
 	public void Update(){
 
 		transform.Rotate(Vector3.up * Time.deltaTime );
 
+		if(Input.GetKeyDown(KeyCode.O) && isPlayerInside){
+			FindObjectOfType<inventory>().addNewItem();//(invetorySprite)
+			Destroy(this.gameObject);
+		}
+
 		if(Input.GetKeyDown(KeyCode.I) && isPlayerInside){
-			gameObject.GetComponent<Renderer>().material.color = color;
+			interactivePanel.SetActive(true);
+			isPlayerInside = true;
 		}
 	}
 
 	public void OnTriggerEnter(Collider other){
 		if(other.CompareTag("Player")){
-			//this.gameObject.GetComponent<Renderer>().material.color = color;
 			infoPanel.SetActive(true);
 			isPlayerInside = true;
 		}
