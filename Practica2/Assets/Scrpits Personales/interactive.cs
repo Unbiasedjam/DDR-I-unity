@@ -10,7 +10,7 @@ public class interactive : MonoBehaviour {
 
 	public GameObject interactivePanel;
 	public GameObject infoPanel;
-
+	public Sprite sprite;
 
 	public void Start(){
 		infoPanel.SetActive(false);
@@ -18,10 +18,10 @@ public class interactive : MonoBehaviour {
 	}
 	public void Update(){
 
-		transform.Rotate(Vector3.up * Time.deltaTime );
+		//transform.Rotate(Vector3.up * Time.deltaTime );
 
 		if(Input.GetKeyDown(KeyCode.O) && isPlayerInside){
-			FindObjectOfType<inventory>().addNewItem();//(invetorySprite)
+			FindObjectOfType<inventory>().addNewItem(sprite);//(invetorySprite)
 			Destroy(this.gameObject);
 		}
 

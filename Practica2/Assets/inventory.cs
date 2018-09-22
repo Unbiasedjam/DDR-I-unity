@@ -9,14 +9,13 @@ public class inventory : MonoBehaviour {
 
 	public GameObject backgroundPanel;
 
-	public Sprite SwordSprite; //lista de items
 	
 
-	public void addNewItem(){
+	public void addNewItem(Sprite sprite){
 		GameObject item = new GameObject();
 		item.transform.SetParent(inventoryPanel.transform);
 		Image image = item.AddComponent<Image>();
-		image.sprite = SwordSprite;
+		image.sprite = sprite;
 	}
 
 	public void Start(){

@@ -29,7 +29,7 @@ public class Pauser : MonoBehaviour {
 
 	public void ResetGame(){
 		Debug.Log("reset");
-		SceneManager.LoadScene(1);
+		SceneManager.LoadScene(0);
 	}
 
 	public void PauseMusic(){
