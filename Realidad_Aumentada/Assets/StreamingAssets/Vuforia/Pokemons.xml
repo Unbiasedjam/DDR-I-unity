@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QCARConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="qcar_config.xsd">
+  <Tracking>
+    <ImageTarget name="seedot" size="0.060000 0.083851" />
+    <ImageTarget name="8-beautifly" size="0.060000 0.084667" />
+    <ImageTarget name="Wailord" size="0.060000 0.083565" />
+    <ImageTarget name="totodile" size="0.060000 0.082873" />
+    <ImageTarget name="Groudon" size="0.060000 0.082873" />
+  </Tracking>
+</QCARConfig>

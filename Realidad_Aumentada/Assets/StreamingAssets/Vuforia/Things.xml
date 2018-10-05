@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QCARConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="qcar_config.xsd">
+  <Tracking>
+    <ImageTarget name="sunshine" size="0.100000 0.144796" />
+    <ImageTarget name="burrnnn" size="0.100000 0.144796" />
+    <ImageTarget name="burn" size="0.100000 0.145897" />
+    <ImageTarget name="drugz" size="0.100000 0.140556" />
+    <ImageTarget name="prueba" size="0.080000 0.142222" />
+    <ImageTarget name="toto" size="0.050000 0.065166" />
+  </Tracking>
+</QCARConfig>
