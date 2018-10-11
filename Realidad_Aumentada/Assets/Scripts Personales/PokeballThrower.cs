@@ -11,7 +11,6 @@ public class PokeballThrower : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if(Input.GetButtonDown("Fire1")){
-		//if(Input.GetKeyDown(KeyCode.P)){
 			transform.LookAt(Vector3.zero);//mire hacia el centro
 			GameObject pokeball = (GameObject) Instantiate(pokeballPrefab, transform.position, transform.rotation);//instanciar la pokebola
 			pokeball.GetComponent<Rigidbody>().AddForce(transform.forward * throwSpeed, ForceMode.Impulse);//fuerza hacia enfrente
