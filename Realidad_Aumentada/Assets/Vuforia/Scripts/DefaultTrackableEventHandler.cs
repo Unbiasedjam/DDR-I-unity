@@ -21,7 +21,6 @@ public class DefaultTrackableEventHandler : MonoBehaviour, ITrackableEventHandle
 
     public AudioSource voice;
 
-
     protected TrackableBehaviour mTrackableBehaviour;
 
     #endregion // PROTECTED_MEMBER_VARIABLES
@@ -34,7 +33,6 @@ public class DefaultTrackableEventHandler : MonoBehaviour, ITrackableEventHandle
         if (mTrackableBehaviour)
             mTrackableBehaviour.RegisterTrackableEventHandler(this);
 
-        voice = GetComponent<AudioSource>();
     }
 
     protected virtual void OnDestroy()

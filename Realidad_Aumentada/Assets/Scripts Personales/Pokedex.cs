@@ -3,13 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class inventory : MonoBehaviour {
+public class Pokedex : MonoBehaviour {
 
 	public GameObject inventoryPanel;
 
 	public GameObject backgroundPanel;
-
-
 
 	public void addNewItem(Sprite sprite){
 		GameObject item = new GameObject();
@@ -22,9 +20,20 @@ public class inventory : MonoBehaviour {
 		backgroundPanel.SetActive(false);
 	}
 
-	public void Update(){
-		if(Input.GetKey(KeyCode.B)){
-			backgroundPanel.SetActive(!backgroundPanel.activeSelf);
-		}
+	public void Update(){ //Cambiar la tecla B por el click del boton
+		
 	}
+
+	public void Panel(){
+			backgroundPanel.SetActive(!backgroundPanel.activeSelf);
+	}
+
+	public void Exit(){
+		Application.quitting += Quit;
+	}
+	
+	public void Quit(){
+		Debug.Log("Bye");
+	}
+    
 }
