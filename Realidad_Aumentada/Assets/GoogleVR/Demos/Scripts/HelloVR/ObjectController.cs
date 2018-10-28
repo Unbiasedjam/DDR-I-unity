@@ -23,11 +23,13 @@ namespace GoogleVR.HelloVR {
 
     public Material inactiveMaterial;
     public Material gazedAtMaterial;
+    TeleportInteraction timer;
 
     void Start() {
       startingPosition = transform.localPosition;
       myRenderer = GetComponent<Renderer>();
       SetGazedAt(false);
+      timer = GetComponent<TeleportInteraction>();
     }
 
     public void SetGazedAt(bool gazedAt) {
@@ -81,5 +83,15 @@ namespace GoogleVR.HelloVR {
       gameObject.SetActive(false);
       SetGazedAt(false);
     }
+    private void Update(){
+		if(timer != null){//logica para el eliminar cosas con el timer u otras acciones
+			if(timer.timeUp){
+        gameObject.SetActive(false);
+        SetGazedAt(false);
+			}
+		}
+	}
   }
+
+  
 }

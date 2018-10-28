@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using GoogleVR.Demos;
 
 public class TeleportInteraction : MonoBehaviour {
 
@@ -13,13 +14,11 @@ public class TeleportInteraction : MonoBehaviour {
     [HideInInspector]
     public bool timeUp = false;
 
-	void start(){
-		//manager = FindObjectOfType<DemoSenceManager>();
+	void Start(){
 	}
-    private void update(){
+    private void Update(){
 		if(isCounting){
 			elpasedTime += Time.deltaTime;
-			//manager.FillWaitImage(elapsTime/ gazeTIme);
 			if(elpasedTime >= gazeTime){
 				timeUp = true;
 			}
@@ -32,11 +31,9 @@ public class TeleportInteraction : MonoBehaviour {
 		timeUp = false;
 	}
 
-	public void stopTimer(){
+	public void StopTimer(){
 		isCounting = false;
 		elpasedTime = 0f;
 		timeUp = false;
 	}
-
-
 }
